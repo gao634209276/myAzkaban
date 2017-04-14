@@ -1,0 +1,6 @@
+type=command
+#可以配置多个command命令
+command=${app_home}/beeline -u 'jdbc:hive2://10.40.33.12:10001/default;transportMode=http;httpPath=cliservice' -n "sinova" -f spark.sql \
+--autoCommit false
+command.2=echo job end
+dependencies=spark_begin

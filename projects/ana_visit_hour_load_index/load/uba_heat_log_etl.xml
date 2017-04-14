@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+<name>hive.table.name</name>
+<value>t_uba_heat_log</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+      id;
+      visit_date;
+      visit_url;
+      visit_domain;
+      visit_ip;
+      visit_chid;
+      visit_site;
+      session_id;
+      visit_id;
+      src_size;
+      scr_pixel;
+      local_ip;
+      data_points;
+  insert_time
+</value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#ID#false#5000#;
+1#访问时间#false#5000#;
+2#访问URL#false#5000#;
+3#访问域名#false#5000#;
+4#访问者IP#false#5000#;
+5#访问频道ID#false#5000#;
+6#访问站点ID#false#5000#;
+7#SESSION_ID#false#5000#;
+8#访问者ID(COOKIE中的VU_ID值)#false#5000#;
+9#屏幕大小#false#5000#;
+10#屏幕的分辨率#false#5000#;
+11#服务器IP#false#5000#;
+12#数据点#false#5000#;
+</value>
+</property>
+</configuration>

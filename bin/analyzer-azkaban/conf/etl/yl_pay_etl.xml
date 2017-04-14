@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_yl_pay</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+payorderid;
+serviceorderid;
+paychannelorder;
+payproviderorder;
+payorgcode;
+channelcode;
+connectchannel;
+paystatus;
+backtag;
+paycompletetime;
+merchantsid;
+refundtime;
+reserver1;
+paypoundage;     
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#支付平台订单号#true#30#;
+1#业务平台订单号#true#30#;
+2#支付渠道订单号#false#40#;
+3#支付机构订单号#true#40#;
+4#支付机构编码#true#2#;
+5#支付渠道编码#true#20#;
+6#接入渠道#true#2#;
+7#支付状态#true#2#;
+8#退费标识#true#2#;
+9#支付机构完成支付时间#true#50#;
+10#商户编码#false#30#;
+11#退款时间#false#50#;
+12#预留字段1#false#20#;
+13#支付手续费#true#20#;
+
+</value>
+</property>
+
+</configuration>
+
+

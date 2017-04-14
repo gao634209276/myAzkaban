@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_f_zhfw_click</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+query_bss_id;
+zhfw_bss_id;
+recommend_id;
+query_time;
+goto_url;
+query_ip;
+remark2;
+remark3;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#点击流水号#true#100#;
+1#推荐流水号#true#100#;
+2#点击业务ID#true#100#;
+3#点击时间#true#14#;
+4#点击URL#true#255#;
+5#点击业务用户IP#false#50#;
+6#备注2#false#100#;
+7#备注3#false#100#;
+</value>
+</property>
+</configuration>

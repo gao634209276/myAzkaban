@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_all_access</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+bss_id;
+mobile;
+prov_id;
+city_id;
+interface_id;
+request_time;
+response_time;
+intf_serial_no;
+intf_used_time;
+intf_return_code;
+intf_return_desc;
+parent_thread_no;
+sub_thread_no;
+version;
+cluster_name;
+application;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#渠道编码#true#100#select CHANNEL_CODE,CHANNEL_CODE from T_EBD_CHANNEL;
+1#渠道扩展编码(终端号)#false#100#;
+2#trans_ip#true#100#;
+3#来源省#false#100#;
+4#来源市#false#100#;
+5#来源URL#false#3000#;
+6#trans_time时间#true#100#;
+7#客户ID#false#100#;
+8#客户归属省#false#100#;
+9#客户归属市#false#100#;
+10#服务号码#false#100#;
+11#注册账号#false#100#;
+12#页面url/请求指令#false#3000#;
+13#交易流水#false#100#;
+14#成功状态#false#100#;
+15#业务编码#false#100#;
+</value>
+</property>
+
+</configuration>

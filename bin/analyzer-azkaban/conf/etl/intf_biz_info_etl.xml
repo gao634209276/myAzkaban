@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>baseNode000087</name>
+  <value>flowinf</value>
+</property>
+<property>
+  <name>jsonAttr000087</name>
+  <value>flowtype,freeleavings,freetotle,freeused</value>
+</property>
+<property>
+  <name>baseAttrr000087</name>
+  <value>0,1,2,3</value>
+</property>
+<property>
+  <name>jsonBaseStrs000087</name>
+  <value>answercode,busiorder</value>
+</property>
+
+
+
+<property>
+  <name>baseNode000092</name>
+  <value>flowinf</value>
+</property>
+<property>
+  <name>jsonAttr000092</name>
+  <value>chargedflow,packageleavingsflow,packageusedflow,totalflow</value>
+</property>
+<property>
+  <name>baseAttrr000092</name>
+  <value>0,1,2,3</value>
+</property>
+
+
+
+<property>
+  <name>baseNode000112</name>
+  <value>feepolicyaddupinfo</value>
+</property>
+<property>
+  <name>jsonAttr000112</name>
+  <value>addupitemname,addupupper,cycleid,feepolicyname,xcanusevalue</value>
+</property>
+<property>
+  <name>baseAttrr000112</name>
+  <value>0,1,2,3</value>
+</property>
+<property>
+  <name>jsonBaseStrs000112</name>
+  <value>detailenddate,detailstartdate</value>
+</property>
+
+
+<property>
+  <name>hive.table.names</name>
+  <value>flow:000087,package_flow:000092,fee_item:000112</value>
+</property>
+
+<property>
+  <name>hive.jdbc.url</name>
+  <value>jdbc:hive://10.20.11.17:10000/default</value>
+</property>
+
+</configuration>

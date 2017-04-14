@@ -1,0 +1,3 @@
+type=command
+command=echo "analyze_all start"
+dependencies=delete_tab

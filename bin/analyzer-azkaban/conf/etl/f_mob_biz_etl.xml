@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+<name>hive.table.name</name>
+<value>t_ods_f_mob_biz</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+  bss_id;
+  login_name;
+  user_mobile;
+  province_id;
+  city_id;
+  net_id;
+  pay_id;
+  brand_id;
+  location_type;
+  package_id;
+  package_name;
+  is_member;
+  is_group;
+  is_wo;
+  net_time;
+  is_vip;
+  vip_level;
+  biz_code;
+  commit_type;
+  biz_time;
+  biz_result;
+  response_code;
+  biz_fail;
+  user_ip;
+  provider_key;
+  application;
+  version;
+  exp_id;
+  recommendname;
+  recommendcode;
+  operator_id;
+  imie;
+  wi;
+  groupid;
+  sourceid;
+  adid;
+  session_id;
+  json;
+  remark1;
+  remark2;
+  remark3;
+  remark4;
+  remark5;
+  bizend_time;
+  biz_hostip;
+  biz_process;
+  phone_brand;
+  phone_model;
+  insert_time
+</value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#业务流水号#true#50#;
+1#登陆号码#true#50#;
+2#号码#true#50#;
+3#省份#false#3#;
+4#地市#false#5#;
+5#网别#false#2#;
+6#付费类型#false#1#;
+7#品牌#false#100#;
+8#登陆类型#false#100#;
+9#主套餐编码#false#100#;
+10#主套餐名称#false#100#;
+11#是否成员号码#false#1#;
+12#是否集团客户#false#1#;
+13#是否沃家庭#false#1#;
+14#入网时间#false#100#;
+15#是否VIP#false#1#;
+16#VIP级别#false#100#;
+17#业务编码#true#100#;
+18#提交类型#false#1#;
+19#业务办理时间#true#100#;
+20#业务办理结果#false#1#;
+21#业务失败编码#false#100#;
+22#业务失败原因#false#100#;
+23#用户ip#false#100#;
+24#厂商#true#100#;
+25#渠道#true#100#;
+26#版本号#true#100#;
+27#店铺ID#false#100#;
+28#发展人名称#false#100#;
+29#发展人编码#false#100#;
+30#操作员工号#false#100#;
+31#设备号#false#100#;
+32#自然人#false#100#;
+33#集团ID#false#100#;
+34#来源ID(接入子渠道)#false#100#;
+35#广告ID#false#100#;
+36#SESSION_ID#false#100#;
+37#JSON#false#1000#;
+38#备用字段1#false#100#;
+39#备用字段2#false#100#;
+40#备用字段3#false#100#;
+41#备用字段4#false#100#;
+42#备用字段5#false#100#;
+43#业务处理时常#true#100#;
+44#承载主机IP地址#true#100#;
+45#承载节点名称#true#100#;
+46#终端手机品牌#false#100#;
+47#终端手机型号#false#100#;
+</value>
+</property>
+</configuration>

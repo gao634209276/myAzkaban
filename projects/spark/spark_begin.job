@@ -1,0 +1,4 @@
+type=command
+command=echo job begin
+#可以配置多个command命令
+command.1=${app_home}/beeline -u 'jdbc:hive2://10.40.33.12:10001/default;transportMode=http;httpPath=cliservice' -n "''" -e "show databases"

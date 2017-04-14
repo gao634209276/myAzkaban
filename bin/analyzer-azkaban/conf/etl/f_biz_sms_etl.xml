@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+<name>hive.table.name</name>
+<value>t_ods_f_biz_sms</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+bss_id;
+user_mobile;
+query_time;
+pay_id;
+net_id;
+location_type;
+brand_id;
+application;
+version_id;
+biz_type;
+new_biz_id;
+is_precommit;
+response_code;
+result;
+provider_key;
+province_id;
+city_id;
+user_ip;
+nodepoint_name;
+combo_key;
+operate_type;
+cur_product_id;
+new_product_id;
+operator_id;
+is_reback;
+effect_type;
+bss_product_id;
+father_id;
+user_type;
+product_type;
+product_sounce;
+product_sign;
+begin_time;
+isleaf;
+iscommend;
+isaptitude;
+areaid;
+fun_id;
+functiontype;
+servicecode;
+servicename;
+responsetime;
+usetime;
+openorclose;
+reqmes;
+resmes;
+query_mobileno;
+query_servicecode;
+requestprotime;
+responseprotime;
+biflag;
+newreqmes;
+listflag;
+insert_time
+</value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#流水号#false#100#;
+1#手机号码#true#100#;
+2#trans_time时间#true#100#;
+3#付费类型#false#100#select PAY_TYPE_ID,PAY_TYPE_ID from T_DIMENSION_PAY;
+4#用户类型#false#100#select USER_TYPE_ID,USER_TYPE_ID from t_dimension_user;
+5#登录类型#true#100#select LOGIN_TYPE_KEY,LOGIN_TYPE_KEY from T_DIMENSION_LOGIN;
+6#品牌编码#false#100#select BRAND_KEY,BRAND_KEY from T_DIMENSION_BRAND;
+7#渠道#true#100#select CHANNEL_CODE,CHANNEL_CODE from T_EBD_CHANNEL;
+8#版本号#false#100#;
+9#业务类型#false#100#select BIZ_TYPE_KEY,BIZ_TYPE_KEY from T_DIMENSION_BIZ_TYPE;
+10#新业务编码#false#100#;
+11#是否预提交查询#false#100#;
+12#响应编码#false#100#;
+13#办理结果#true#100#select RESULT_ID,RESULT_ID from T_DIMENSION_RESULT;
+14#厂商#true#100#;
+15#省编码#false#100#;
+16#地市编码#false#100#;
+17#IP地址#false#100#;
+18#服务器节点名称#false#100#;
+19#主套餐ID#false#100#;
+20#操作类型#false#100#;
+21#当前套餐编码#false#100#;
+22#新套餐编码#false#100#;
+23#操作员工号#false#100#;
+24#是否退订#false#100#;
+25#生效方式#false#100#;
+26#BSS产品编号#false#100#;
+27#所属父级产品编号#false#100#;
+28#适合用户类型#false#100#;
+29#产品类别#false#100#;
+30#产品来源#false#100#;
+31#产品品牌#false#100#;
+32#生效时间#false#100#;
+33#是否有子产品#false#100#;
+34#是否推荐产品#false#100#;
+35#是否支持智能网#false#100#;
+36#产品所属机构#false#100#;
+37#菜单编码#false#100#;
+38#菜单类型#false#100#;
+39#短厅自有业务id#false#100#;
+40#短厅自有业务类型#false#100#;
+41#响应时间#true#100#;
+42#平均耗时#false#100#;
+43#开通/关闭#false#100#;
+44#请求内容#false#3000#;
+45#响应内容#false#3000#;
+46#代办手机号#false#100#;
+47#代办业务#false#100#;
+48#代办请求时间#false#100#;
+49#代办响应时间#false#100#;
+50#热点#false#100#;
+51#经过预处理后的用户上行内容#false#1000#;
+52#智能模块标识字段#false#100#;
+</value>
+</property>
+</configuration>

@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_shop</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+buss_id	;
+buss_date	;
+buss_state	;
+proid	;
+cityid	;
+store_type	;
+store_name	;
+packag	;
+netid	;
+terminal_brandid	;
+terminal_model	;
+terminal_color	;
+activities	;
+shop_fee	;
+fee_card	;
+fee_prestore	;
+fee_first	;
+receivable	;
+rece_card	;
+rece_prestore	;
+rece_contract	;
+rece_terminal	;
+pay_state	;
+pay_type	;
+pay_institution	;
+pay_busid	;
+pay_time	;
+pay_bank	;
+bss_username	;
+return_time	;
+return_reson	;
+return_manager	;
+user_type	;
+user_name	;
+card_type	;
+card_num	;
+card_address	;
+appointment_num	;
+contacts	;
+contacts_tel	;
+contacts_othertel;
+address	;
+logistics_com	;
+ogistics_num	;
+businesshall	;
+loginip	;
+bussapp	;
+referee	;
+referee_tel	;
+buss_time	;
+openapp	;
+develop_person	;
+handle_time	;
+file_time	;
+voucher_num	;
+voucher_price	;
+batchnumber	;
+voucher_name	;
+activities_name	;
+sale	;
+voucher	;
+presen	;
+remark	;
+package_flow	;
+package_sound	;
+package_sms;
+package_add;
+package_search;
+package_caller;
+bss_status;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#订单号#true#100#;
+1#订单日期#true#100#;
+2#订单状态#false#100#;
+3#省分编码#false#100#;
+4#地市编码#false#100#;
+5#商品类型#false#100#;
+6#商品名称#false#100#;
+7#套餐名称#false#100#;
+8#号码网别#false#100#;
+9#终端品牌#false#100#;
+10#终端型号#false#100#;
+11#终端颜色#false#100#;
+12#活动类型#false#100#;
+13#商城实收#false#100#;
+14#其中:卡费#false#100#;
+15#其中:预存话费#false#100#;
+16#首月资费模式#false#100#;
+17#应收#false#100#;
+18#其中:卡费#false#100#;
+19#其中:预存话费#false#100#;
+20#其中:合约预存款#false#100#;
+21#其中:终端款#false#100#;
+22#支付状态#false#100#;
+23#支付方式#false#100#;
+24#支付机构#false#100#;
+25#统一支付订单号#false#100#;
+26#支付时间#false#100#;
+27#支付银行#false#100#;
+28#订单处理员工（姓名＋工号）#false#100#;
+29#退款时间#false#100#;
+30#退单原因#false#200#;
+31#退单客户经理#false#100#;
+32#用户类型#false#100#;
+33#客户姓名#false#100#;
+34#证件类型#false#100#;
+35#证件号码#false#100#;
+36#证件地址#false#100#;
+37#商城预占号码#false#100#;
+38#联系人#false#100#;
+39#联系电话#false#100#;
+40#其他联系电话#false#100#;
+41#配送地址#false#100#;
+42#物流公司#false#100#;
+43#物流单号#false#100#;
+44#预约营业厅#false#100#;
+45#登陆IP#false#100#;
+46#订单渠道#false#100#;
+47#推荐人姓名#false#100#;
+48#推荐人电话#false#100#;
+49#订单生成时间#false#100#;
+50#开户渠道#false#100#;
+51#发展人#false#100#;
+52#处理时间#false#100#;
+53#归档时间#false#100#;
+54#代金券编号#false#100#;
+55#代金券面额#false#100#;
+56#批次号#false#100#;
+57#代金券名称#false#100#;
+58#活动名称#false#100#;
+59#促销活动#false#100#;
+60#折扣金额#false#100#;
+61#赠品#false#500#;
+62#客户备注#false#2000#;
+63#全国流量包#false#100#;
+64#全国语音包#false#100#;
+65#短/彩信包#false#100#;
+66#增值业务包#false#100#;
+67#可选产品包#false#100#;
+68#来电显示包#false#100#;
+69#订单状态#true#10#;
+</value>
+</property>
+</configuration>
+              

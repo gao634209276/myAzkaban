@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_client</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+imie;
+ip;
+open_app_time;
+net_type;
+brand;
+model;
+os;
+version;
+resolution;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#设备号#true#50#;
+1#ip地址#false#50#;
+2#启动时间#true#50#;
+3#上网方式#true#10#;
+4#设备品牌#true#100#;
+5#设备型号#true#100#;
+6#操作系统#true#100#;
+7#版本号#false#100#;
+8#分辨率#false#100#;
+</value>
+</property>
+
+</configuration>

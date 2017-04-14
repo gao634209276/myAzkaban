@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_kxd_pay</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+tradeglide;
+termid;
+orgid;
+tradetime;
+premoney;
+tradecode;
+tradedesp;
+remark;
+extdata1;
+extdata2;
+extdata3;
+provincecode;
+citycode;
+productname;
+papers;
+cardid;
+channeltype;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#订单流水#true#30#;
+1#终端ID#false#20#;
+2#机构ID#false#10#;
+3#预订时间#false#100#;
+4#预存金额#false#10#;
+5#结果标识#false#6#;
+6#结果描述#false#200#;
+7#存费赠费备注信息#false#300#;
+8#参加存费标识#false#20#;
+9#资费处理方式标识#false#20#;
+10#办理结果标识#false#20#;
+11#省分编码#false#6#;
+12#地市编码#false#6#;
+13#套餐名称#false#60#;
+14#证件号码#false#1000#;
+15#预订号码#false#16#;
+16#渠道类型#true#7#;
+</value>
+</property>
+
+</configuration>
+
+

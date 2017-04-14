@@ -1,0 +1,3 @@
+type=command
+command=echo 'ana_visit_day_data_load_index is Ended!'
+dependencies=load-uba_event,load-uba_heat,load-uba_log

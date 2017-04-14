@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>t_ods_detail_business</name>
+  <value>
+ usernumber;
+ net_type;
+ province;
+ city;
+ alltotalfee;
+ spcode; 
+ spname;
+ spmethod;
+ billingmethod;
+ begindate;
+ begintime;
+ fee;
+ infofee;
+ deratefee; 
+ totalfee;
+ businessname; 
+ businesstype;
+ othernum;
+ businesscode; 
+ mtunm;
+ mtfee;
+ xfee;
+ capturetime;
+ onetotalfee
+  </value>
+</property>
+<property>
+  <name>t_ods_detail_call</name>
+  <value>
+usernumber; 
+net_type;
+province; 
+city; 
+alltotalfee; 
+landroamfee;
+calldate; 
+calllonghour; 
+calltime;
+calltype; 
+cellid; 
+deratefee; 
+homearea; 
+landfee;
+landtype; 
+longtype;
+nativefee; 
+otherarea;
+otherfee; 
+othernum; 
+roamfee; 
+romatype; 
+thtype; 
+totalfee; 
+twoplusfee
+  </value>
+</property>
+<property>
+  <name>t_ods_detail_mobilenetdata</name>
+  <value>
+usernumber; 
+net_type;
+province;
+city;
+allfee;
+alltotalbytes; 
+svcname; 
+homearea; 
+begindate;
+begintime;
+longhour;
+receivebytes;
+sendbytes; 
+feetype; 
+roamstat; 
+fee; 
+deratefee;
+totalfee; 
+nettype; 
+extpara;
+totalbytes
+  </value>
+</property>
+<property>
+  <name>t_ods_detail_sms</name>
+  <value>
+usernumber;  
+net_type; 
+province;  
+city;  
+totalfee; 
+totalcount; 
+othernum;
+smstype; 
+homearea;
+otherarea;
+smsdate; 
+smstime;
+fee;
+deratefee;
+amount;
+businesstype
+  </value>
+</property>
+<property>
+  <name>t_ods_detail_historybill</name>
+  <value>
+usernumber;
+net_type;
+province;
+city;
+billdate;
+total_fee;
+deduce_fee;
+actual_pay;
+mon_fixed_fee;
+call_fee;
+flow_fee
+  </value>
+</property>
+
+</configuration>
+              

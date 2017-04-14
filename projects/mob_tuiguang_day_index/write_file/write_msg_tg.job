@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/load_hive_file.sh msg_tg_day.sql msg_tg+${query_time}.log ${query_time} ${local_directory}
+dependencies=analyze_result_day

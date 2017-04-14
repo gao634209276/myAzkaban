@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>azkaban安装文档</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Azkaban安装文档</h1>
+<p>作者：段云涛<a href="&#109;&#97;i&#x6c;&#x74;&#111;&#58;&#100;&#x75;&#97;&#x6e;&#x79;&#117;&#x6e;&#116;&#97;&#x6f;&#x40;&#115;&#x69;&#110;&#111;&#x76;&#97;&#116;&#101;&#x63;&#104;&#46;&#99;&#x6f;m">d&#117;a&#110;y&#117;&#x6e;&#116;&#97;&#x6f;&#64;&#x73;&#105;&#110;&#x6f;&#x76;&#x61;&#116;&#x65;&#99;&#x68;.&#x63;&#111;&#109;</a><br>
+版本：1.0<br>
+修订日期：2015/1/30<br></p>
+<hr />
+<h2>1、其他软件准备</h2>
+<pre><code>1. Hadoop 2.5.2
+2. Java 1.7.0
+3. Hive 0.14.0
+4. Mysql 5.1.63
+5. Pig 0.12.0
+</code></pre>
+
+<h2>2、环境需求</h2>
+<pre><code>1. Hadoop集群 - 保证可用，并配置了相关的环境变量，包括：JAVA_HOME、HADOOP_HOME、HADOOP_MAPRED_HOME、HADOOP_COMMON_HOME、HADOOP_HDFS_HOME、HADOOP_YARN_HOME、HADOOP_CONF_DIR。
+2. Hive - 在服务器上已经部署，并配置HIVE_HOME环境变量，将$HIVE_HOME/bin和$HADOOP_HOME/bin加入到环境变量PATH中。
+3. MySQL Server可用
+</code></pre>
+
+<h2>3、准备工作</h2>
+<h3>3.1、下载azkaban发行版本安装包</h3>
+<pre><code>下载地址：http://azkaban.github.io/downloads.html
+1. azkaban-web-server-2.5.0.tar.gz
+2. azkaban-executor-server-2.5.0.tar.gz
+3. azkaban-sql-script-2.5.0.tar.gz
+4. azkaban-jobtype-2.5.0.tar.gz
+5. azkaban-hdfs-viewer-2.5.0.tar.gz
+6. azkaban-jobsummary-2.5.0.tar.gz
+7. azkaban-reportal-2.5.0.tar.gz
+</code></pre>
+
+<h3>3.2、下载azkaban plugins源码</h3>
+<pre><code>安装过程中需要修改一些bug，重新编译azkaban plugins。&lt;br&gt;
+下载地址：https://github.com/azkaban/azkaban-plugins，并且选择对应的版本进行下载。
+</code></pre>
+
+<h3>3.3、约定</h3>
+<pre><code>1. 本文中所有azkaban组件安装在一台服务器上，安装根目录为：/app/azkaban（下文中将用${appRoot}来引用）。
+</code></pre>
+
+<h2>4、安装azkaban</h2>
+<h3>4.1、MySQL数据库的初始化</h3>
+<p>目前 Azkaban 只支持 MySql ，故需安装 MySql 服务器，安装 MySql 的过程这里不作介绍。</p>
+<pre><code>命令：
+1. 创建数据库（该数据库只供azkaban使用）
+    CREATE DATABASE azkaban;
+2. 创建azkaban用户，并设置密码。
+    CREATE USER 'azkaban'@'%' IDENTIFIED BY 'azkaban';
+3. 给予azkaban用户在azkaban数据库的所有权限。
+    GRANT ALL ON azkaban.* to 'azkaban'@'%' WITH GRANT OPTION; 
+4. 解压缩 azkaban-sql-2.5.0.tar.gz文件，并进入到 azkaban-sql-script目录，然后进入 mysql 命令行模式。
+    mysql -uazkaban -pazkaban
+    use azkaban
+    source create-all-sql-2.5.0.sql
+</code></pre>
+
+<h3>4.2、安装 Azkaban Web Server</h3>
+<pre><code>1. 将azkaban-web-server-2.5.0.tar.gz放入${appRoot}目录。
+    cp azkaban-web-server-2.5.0.tar.gz ${appRoot}
+2. 解压缩azkaban-web-server-2.5.0.tar.gz
+    tar -zxvf azkaban-web-server-2.5.0.tar.gz
+3. 生成 keystore 证书文件,保证Keystore放在${appRoot}/azkaban-web-2.5.0目录下。
+    cd ${appRoot}/azkaban-web-2.5.0
+    keytool -keystore keystore -alias jetty -genkey -keyalg RSA
+4. 修改web-server配置文件azkaban.properties
+    cd ${appRoot}/azkaban-web-2.5.0/conf
+    vim azkaban.properties
+    1. 修改时区和首页名称
+    azkaban.name=Sinovatech
+    azkaban.label=Sinovatech-Azkaban
+    azkaban.color=#FF3601
+    azkaban.default.servlet.path=/index
+    web.resource.dir=web/
+    default.timezone.id=Asia/Shanghai
+    viewer.plugin.dir=plugins/viewer
+    2. 用户和权限管理
+    user.manager.class=azkaban.user.XmlUserManager
+    user.manager.xml.file=conf/azkaban-users.xml
+    3. MySQL配置
+    database.type=mysql
+    mysql.port=3306
+    mysql.host=10.40.33.11
+    mysql.database=azkaban
+    mysql.user=azkaban
+    mysql.password=azkaban
+    mysql.numconnections=100
+    4. Jetty配置，将前面生成Keystore时候的配置加入以下配置
+    jetty.keystore=keystore
+    jetty.password=azkaban
+    jetty.keypassword=azkaban
+    jetty.truststore=keystore
+    jetty.trustpassword=azkaban
+    jetty.hostname=10.40.33.11
+    jetty.maxThreads=25
+    jetty.ssl.port=8443
+    jetty.port=8081
+</code></pre>
+
+<h3>4.3、安装 azkaban-executor-server</h3>
+<pre><code>1. 将azkaban-executor-server-2.5.0.tar.gz放入${appRoot}目录。
+    cp azkaban-executor-server-2.5.0.tar.gz ${appRoot}
+2. 解压缩azkaban-executor-server-2.5.0.tar.gz
+    tar -zxvf azkaban-executor-server-2.5.0.tar.gz
+3. 修改配置文件azkaban.properties
+    cd ${appRoot}/azkaban-executor-2.5.0/conf
+    vim azkaban.properties
+    1. 修改时区
+    default.timezone.id=Asia/Shanghai
+    2. 指定jobtypes目录
+    azkaban.jobtype.plugin.dir=plugins/jobtypes
+    3. MySQL配置
+    database.type=mysql
+    mysql.port=3306
+    mysql.host=10.40.33.11
+    mysql.database=azkaban
+    mysql.user=azkaban
+    mysql.password=azkaban
+    mysql.numconnections=100
+</code></pre>
+
+<h3>4.4、插件安装</h3>
+<h4>4.4.1、安装HDFS Viewer插件</h4>
+<pre><code>1. 将azkaban-hdfs-viewer-2.5.0.tar.gz放入${appRoot}/azkaban-web-2.5.0/plugins/viewer目录。
+    cp azkaban-hdfs-viewer-2.5.0.tar.gz {appRoot}/azkaban-web-2.5.0/plugins/viewer
+2. 解压缩azkaban-hdfs-viewer-2.5.0.tar.gz
+    tar -zxvf azkaban-hdfs-viewer-2.5.0.tar.gz
+3. 重命名文件夹为hdfs。
+    mv azkaban-hdfs-viewer-2.5.0 hdfs
+4. 配置HDFS Viewer
+    cd ${appRoot}/azkaban-web-2.5.0/plugins/viewer/hdfs/conf
+    vim plugin.properties
+    修改以下配置
+    viewer.name=HDFS
+    viewer.path=hdfs
+    viewer.order=1
+    viewer.hidden=false
+    viewer.external.classpaths=extlib/*
+    viewer.servlet.class=azkaban.viewer.hdfs.HdfsBrowserServlet
+    hadoop.security.manager.class=azkaban.security.HadoopSecurityManager_H_2_0
+    azkaban.should.proxy=false
+    proxy.user=azkaban
+    proxy.keytab.location=
+    allow.group.proxy=false
+    file.max.lines=1000
+5. 添加以下（hadoop）jar文件到${appRoot}/azkaban-web-2.5.0/plugins/viewer/hdfs/extlib
+    commons-cli-1.2.jar
+    hadoop-auth-2.5.2.jar
+    hadoop-common-2.5.2.jar
+    hadoop-hdfs-2.5.2.jar
+    hadoop-mapreduce-client-core-2.5.2.jar
+    protobuf-java-2.5.0.jar
+</code></pre>
+
+<h4>4.4.2、安装Job Summary插件</h4>
+<pre><code>1. 将azkaban-jobsummary-2.5.0.tar.gz放入${appRoot}/azkaban-web-2.5.0/plugins/viewer目录。
+    cp azkaban-jobsummary-2.5.0.tar.gz {appRoot}/azkaban-web-2.5.0/plugins/viewer
+2. 解压缩azkaban-jobsummary-2.5.0.tar.gz
+    tar -zxvf azkaban-jobsummary-2.5.0.tar.gz
+3. 重命名文件夹为jobsummary。
+    mv azkaban-jobsummary-2.5.0 jobsummary
+</code></pre>
+
+<h4>4.4.3、安装Reportal插件</h4>
+<p>Reportal插件的安装不仅是要在Azkaban Web Server上进行（Viewer插件），也需要在Azkaban Executor Server上进行（Jobtype插件）。</p>
+<pre><code>1. 由于azkaban-reportal-2.5.0.tar.gz中不仅包含Viewer插件，还包含Jobtype插件，所以先在一个临时目录中解压这个包，然后将解压得到的viewer/reportal/目录拷贝到上步中的viewer目录下。最终这个插件的目录路径为：
+{appRoot}/azkaban-web-2.5.0/plugins/viewer/reportal。
+2. 修改{appRoot}/azkaban-web-2.5.0/plugins/viewer/reportal/conf/plugin.properties。由于Web Server和Executor Server是分开部署，不能使用本地文件存储report任务的结果，而是用hdfs存储：
+reportal.output.filesystem=hdfs
+</code></pre>
+
+<h4>4.4.4、安装Jobtypes插件</h4>
+<pre><code>1. 将azkaban-jobtype-2.5.0.tar.gz放入${appRoot}/azkaban-executor-2.5.0/plugins目录。
+    cp azkaban-jobtype-2.5.0.tar.gz {appRoot}/azkaban-executor-2.5.0/plugins
+2. 解压缩azkaban-jobtype-2.5.0.tar.gz
+    tar -zxvf azkaban-jobtype-2.5.0.tar.gz
+3. 重命名文件夹为jobtypes。
+    mv azkaban-jobtype-2.5.0 jobtypes
+4. 将4.4.2中解压得到reportaldatacollector、reportalhive、reportalpig、reportalteradata放入jobtypes文件夹中。
+5. 修改commonprivate.properties和common.properties加入hive.home、hadoop.home、pig.home
+6. 进入 {appRoot}/azkaban-executor-2.5.0/plugins/jobtypes目录建立pig软连接
+    ls -n pig-0.12.0 pig
+</code></pre>
+
+<h3>4.5、 bug修复</h3>
+<pre><code>1. 将准备好的azkaban-jobtype-2.5.jar、azkaban-hadoopsecuritymanager-yarn-2.5.jar、azkaban-reportal-2.5.jar 、azkaban-hadoopsecuritymanager-2.5.jar替换以下目录中对应的-2.5.0.jar。
+    1. ${appRoot}/azkaban-web-2.5.0/plugins/viewer/hdfs/lib
+    2. ${appRoot}/azkaban-web-2.5.0/plugins/viewer/jobsummary/lib
+    3. ${appRoot}/azkaban-web-2.5.0/plugins/viewer/reportal/lib
+    4. ${appRoot}/azkaban-executor-2.5.0/plugins/jobtypes/hadoopJava
+    5. ${appRoot}/azkaban-executor-2.5.0/plugins/jobtypes/hive
+    6. ${appRoot}/azkaban-executor-2.5.0/plugins/jobtypes/java
+    7. ${appRoot}/azkaban-executor-2.5.0/plugins/jobtypes/pig
+    8. ${appRoot}/azkaban-executor-2.5.0/plugins/jobtypes/reportaldatacollector
+    9. ${appRoot}/azkaban-executor-2.5.0/plugins/jobtypes/reportalhive
+    10. ${appRoot}/azkaban-executor-2.5.0/plugins/jobtypes/reportalpig
+    11. ${appRoot}/azkaban-executor-2.5.0/plugins/jobtypes/reportalteradata
+2. 将已经修复完的azkaban-2.5.jar替换以下目录中对应的-2.5.0.jar
+    1.  ${appRoot}/azkaban-web-2.5.0/lib
+    2.  ${appRoot}/azkaban-executor-2.5.0/lib
+</code></pre>
+
+<h3>4.6、用户和权限设置</h3>
+<pre><code>cd ${appRoot}/azkaban-web-2.5.0/conf
+vim azkaban-users.xml
+配置信息如下：
+    &lt;azkaban-users&gt;
+        &lt;user username=&quot;azkaban&quot; password=&quot;azkaban&quot; roles=&quot;admin&quot; groups=&quot;azkaban&quot; /&gt;
+        &lt;user username=&quot;metrics&quot; password=&quot;metrics&quot; roles=&quot;metrics&quot;/&gt;
+        &lt;user username=&quot;sinova&quot; password=&quot;sinova&quot; roles=&quot;admin&quot; groups=&quot;azkaban&quot; /&gt;
+
+        &lt;role name=&quot;admin&quot; permissions=&quot;ADMIN&quot; /&gt;
+        &lt;role name=&quot;metrics&quot; permissions=&quot;METRICS&quot;/&gt;
+        &lt;role name=&quot;readall&quot; permissions=&quot;READ&quot;/&gt;
+        &lt;role name=&quot;writeall&quot; permissions=&quot;WRITE&quot;/&gt;
+        &lt;role name=&quot;executeall&quot; permissions=&quot;EXECUTE&quot;/&gt;
+        &lt;role name=&quot;scheduleall&quot; permissions=&quot;SCHEDULE&quot;/&gt;
+        &lt;role name=&quot;createprojects&quot; permissions=&quot;CREATEPROJECTS&quot;/&gt;
+    &lt;/azkaban-users&gt;
+</code></pre>
+
+<h3>4.7、azkaban的启动和停止</h3>
+<pre><code>1. 启动web-server
+    cd ${appRoot}/azkaban-web-2.5.0
+    bin/start-web.sh
+2. 停止web-server
+    bin/azkaban-web-shutdown.sh
+3. 启动exe-server
+    cd ${appRoot}/azkaban-executor-2.5.0
+    bin/start-exec.sh
+4. 停止exe-server
+    bin/azkaban-executor-shutdown.sh
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

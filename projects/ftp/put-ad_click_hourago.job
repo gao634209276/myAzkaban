@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/ftp.sh -t put -h ${ip_host} -u ${username} -p ${password}  -f ${hiveconf.directory} -d ${destination_path} -a ${query_time}
+dependencies=process-ad_click_hourago

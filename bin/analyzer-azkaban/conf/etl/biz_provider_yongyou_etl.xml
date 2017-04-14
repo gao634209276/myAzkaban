@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_biz_provider</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+trans_id;
+user_mobile;
+province_id;
+city_id;
+net_id;
+pay_id;
+brand_id;
+location;
+provider_key;
+application;
+version;
+interface_id;
+interface_name;
+interface_type;
+result;
+fail_reson;
+response_code;
+query_time;
+cur_package_id;
+cur_package_name;
+new_package_id;
+new_package_name;
+operate_type;
+commit_type;
+is_reback;
+effect_type;
+auto_id;
+business_hall;
+pay_login_name;
+pay_money_price;
+pay_money_act;
+remark4;
+remark5;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#接口流水号#true#100#;
+1#号码#true#50#;
+2#省份#false#5#;
+3#地市#false#5#;
+4#网别#false#5#;
+5#付费类型#false#5#;
+6#品牌#false#5#;
+7#登录类型#false#5#;
+8#厂商#true#50#;
+9#渠道#true#50#;
+10#版本号#false#50#;
+11#接口编码#true#50#select provider_code,provider_code from t_dimension_provider_code;
+12#接口名称#true#50#;
+13#接口类型#true#50#;
+14#结果#true#2#;
+15#失败原因#false#500#;
+16#失败编码#false#100#;
+17#时间#true#50#;
+18#当前套餐ID#false#100#;
+19#当前套餐名称#false#100#;
+20#新套餐ID#false#100#;
+21#新套餐名称#false#100#;
+22#操作类型#false#5#;
+23#提交类型#false#5#;
+24#是否退订#false#5#;
+25#生效方式#false#5#;
+26#自助终端编码#false#100#;
+27#实体营业厅#false#100#;
+28#登录账号#false#100#;
+29#应缴金额#false#100#;
+30#实际金额#false#100#;
+31#备用字段4#false#100#;
+32#备用字段5#false#100#;
+</value>
+</property>
+
+</configuration>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_nginx</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+channel_no;
+version;
+usst;
+uvst;
+client_ip;
+prov_id;
+city_id;
+query_time;
+req_url;
+status;
+body_bytes_sent;
+referer;
+user_agent;
+request_time;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#渠道编码#true#100#;
+1#用户session_id#false#100#;
+2#唯一访客ID#false#100#;
+3#IP地址#true#100#;
+4#省份id#false#100#;
+5#地市id#false#100#;
+6#trans_time时间#true#100#;
+7#请求的URL#true#2000#;
+8#状态#false#100#;
+9#返回的字节数#false#100#;
+10#Referer#true#2000#;
+11#UserAgent#true#2000#;
+12#处理相应秒数#true#100#;
+</value>
+</property>
+
+</configuration>

@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/ana-multi_export.sh ${tabs_other} ${db_url} ${db_username} ${db_password}
+dependencies=analyze-outref,analyze-site_total,analyze-source,analyze-updown,analyze-heat

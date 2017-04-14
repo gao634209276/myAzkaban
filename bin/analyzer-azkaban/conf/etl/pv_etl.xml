@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_pv</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+src_url;
+page_url;
+session_id;
+ip;
+query_time;
+ua;
+user_mobile;
+version;
+prov_id;
+city_id;
+method;
+param;
+menuid;
+src_id;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#来源URL#false#1000#;
+1#当前URL#true#1000#;
+2#sessionId#false#1000#;
+3#IP#false#100#;
+4#访问时间#false#100#;
+5#UA#false#1000#;
+6#用户号码#false#100#;
+7#版本号#false#100#;
+8#省编码#false#100#;
+9#地市编码#false#100#;
+10#GETorPOST#false#100#;
+11#请求参数(JSON格式)#false#2000#;
+12#menuid#false#100#;
+13#来源ID#false#100#;
+</value>
+</property>
+</configuration>
+              

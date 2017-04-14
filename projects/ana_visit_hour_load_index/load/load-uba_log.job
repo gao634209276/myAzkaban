@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/etl_flume.sh ${query_time} ${uba_log} ${rerun}
+dependencies=ana_visit_hour_load_index_start

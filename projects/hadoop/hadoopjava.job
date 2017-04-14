@@ -1,0 +1,5 @@
+type=hadoopJava
+job.class=com.dataeye.mr.WordCount
+classpath=lib/* force.output.overwrite=true
+input.path=/tmp/azkaban/wordcountjavain
+output.path=/tmp/azkaban/wordcountjavaout

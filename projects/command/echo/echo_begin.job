@@ -1,0 +1,5 @@
+type=command
+command=echo 'hello world'
+#可以配置多个command命令
+command.1=echo 'echo hello'
+command.2=echo 'echo azkaban'

@@ -1,0 +1,5 @@
+type=hive
+user.to.proxy=azkaban
+azk.hive.action=execute.query
+hive.script=pro_heat.hql
+dependencies=analyze_all2

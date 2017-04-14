@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_search</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+user_name;
+province_id;
+city_id;
+user_ip;
+referer;
+search_url;
+search_time;
+search_operates;
+search_process_time;
+uid;
+user_mobile;
+cookie_id;
+session_id;
+search_word;
+suggest_word;
+before_search_word;
+is_recommend;
+hits;
+search_page_no;
+application_key;
+imei;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#登录用户名#false#100#;
+1#省份编码#false#10#;
+2#地市编码#false#10#;
+3#IP地址#false#100#;
+4#来源URL#false#1000#;
+5#搜索地址#true#1000#;
+6#搜索时间#true#100#;
+7#查询操作#false#100#;
+8#查询耗时#false#100#;
+9#UID#false#100#;
+10#用户号码#false#100#;
+11#COOKIEID#false#100#;
+12#会话ID#false#100#;
+13#当前搜索词#false#1000#;
+14#联想提示词#false#100#;
+15#前一搜索词#false#100#;
+16#是否为推荐词#false#100#;
+17#命中文档总数#false#100#;
+18#当前页码#false#100#;
+19#渠道编码#true#100#;
+20#IMEI串号#false#100#;
+</value>
+</property>
+</configuration>

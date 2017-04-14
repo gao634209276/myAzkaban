@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_shop_broadband</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+pro_id;
+city_id;
+bss_number;
+referees_name;
+referees_phone;
+receive_type;
+bss_date;
+store_name;
+broadband_rate;
+fee_type;
+charges;
+store_receive;
+fee_open;
+fee_measurement;
+fee_poundage;
+fee_flat;
+fee_equipment;
+fee_yc;
+fee_receive;
+fee_deposit;
+pay_type;
+pay_state;
+pay_time;
+pay_money;
+pay_depart;
+pay_bssid;
+bss_state;
+installed_address;
+customer_name;
+card_type;
+card_address;
+contact_person;
+contact_phone;
+invoice_title;
+customer_massage;
+account_type;
+back_reason;
+back_time;
+channel_type;  
+open_account;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#省份#false#4#;
+1#地市#false#4#;
+2#订单号#true#22#;
+3#推荐人姓名#false#150#;
+4#推荐人号码#false#100#;
+5#受理类型#false#50#;
+6#下单时间#false#50#;
+7#商品名称#false#120#;
+8#宽带速率#false#50#;
+9#计费方式#false#50#;
+10#资费#false#50#;
+11#商城应收#false#22#;
+12#开户费#false#22#;
+13#调测费#false#22#;
+14#手续费#false#22#;
+15#工料费#false#22#;
+16#设备费#false#22#;
+17#预存款#false#22#;
+18#接入费#false#22#;
+19#押金费#false#22#;
+20#支付方式#false#20#;
+21#支付状态#false#30#;
+22#支付时间#false#50#;
+23#支付金额#false#22#;
+24#支付机构#false#20#;
+25#统一支付订单号#false#30#;
+26#订单状态#false#50#;
+27#装机地址#false#1000#;
+28#客户名称#false#1000#;
+29#证件类型#false#1000#;
+30#证件地址#false#1000#;
+31#联系人#false#1000#;
+32#联系电话#false#1000#;
+33#发票抬头#false#1000#;
+34#客户留言#false#1024#;
+35#账单交费方式#false#50#;
+36#退单原因#false#500#;
+37#退单时间#false#50#;
+38#渠道类型#true#70#;
+39#宽带开户账号#false#100#;
+</value>
+</property>
+
+</configuration>
+
+

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_biz_intf_v3</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+trans_id;
+auto_id;
+bss_id;
+user_mobile;
+province_id;
+city_id;
+net_id;
+pay_id;
+brand_id;
+provider_key;
+application;
+version;
+interface_id;
+interface_name;
+interface_type;
+result;
+fail_reson;
+response_code;
+query_time;
+change_type;
+cur_package_id;
+cur_package_name;
+cur_package_type;
+cur_product_id;
+new_package_id;
+new_package_name;
+new_packaget_type;
+new_product_type;
+operate_type;
+commit_type;
+is_reback;
+effect_type;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#接口流水号#false#100#;
+1#亚联业务流水号#false#100#;
+2#炎黄业务流水号#false#100#;
+3#号码#true#50#;
+4#省份#false#5#;
+5#地市#false#5#;
+6#网别#false#5#;
+7#付费类型#false#5#;
+8#品牌#false#5#;
+9#厂商#true#10#;
+10#渠道#true#10#;
+11#版本号#true#10#;
+12#接口编码#true#50#;
+13#服务编码#true#50#;
+14#接口类型#true#50#;
+15#结果#true#2#;
+16#失败原因#false#100#;
+17#失败编码#false#50#;
+18#时间#true#50#;
+19#变更类型#false#50#;
+20#当前套餐ID#false#50#;
+21#当前套餐名称#false#500#;
+22#当前套餐类型#false#50#;
+23#当产品类型#false#50#;
+24#新套餐ID#false#50#;
+25#新套餐名称#false#50#;
+26#新套餐类型#false#50#;
+27#新产品类型#false#50#;
+28#操作类型#false#2#;
+29#提交类型#false#2#;
+30#是否退订#false#2#;
+31#生效方式#false#2#;
+</value>
+</property>
+
+</configuration>
+

@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/delete.sh mob_tg_line ${query_time}
+dependencies=analyze_result_day

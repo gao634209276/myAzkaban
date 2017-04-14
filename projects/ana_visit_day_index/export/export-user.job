@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/ana-multi_export.sh ${tabs_user} ${db_url} ${db_username} ${db_password}
+dependencies=analyze-user_new,analyze-user_new_all,analyze-user_old,analyze-user_old_all

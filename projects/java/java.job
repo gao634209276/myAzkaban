@@ -1,0 +1,9 @@
+type=java
+#指定类的全路径
+job.class=com.dataeye.java.JavaMain
+#指定执行jar包的路径
+classpath=lib/*
+#用户参数1
+file.rows=10
+#用户参数2
+file.line=50

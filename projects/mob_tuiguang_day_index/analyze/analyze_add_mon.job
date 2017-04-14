@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/mob_tuiguang/mob_addmon.sh
+dependencies=import_day_detail

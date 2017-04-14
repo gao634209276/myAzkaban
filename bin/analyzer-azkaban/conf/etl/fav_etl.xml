@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_fav</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+query_time;
+biz_id;
+user_mobile;
+prov_id;
+channel_id;
+is_fav;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#trans_time时间#true#26#;
+1#业务编码#true#32#;
+2#用户号码#true#32#;
+3#省份编码#true#5#;
+4#渠道编码#true#25#;
+5#对业务喜好#true#5#;
+</value>
+</property>
+
+</configuration>

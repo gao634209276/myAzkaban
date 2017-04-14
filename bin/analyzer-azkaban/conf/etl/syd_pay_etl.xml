@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_syd_pay</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+buss_id;
+buss_state;
+pro_id;
+city_id;
+store_type;
+package_name;
+net_id;
+brand_id;
+active_type;
+paid_in;
+receive_account;
+pay_state;
+pay_type;
+pay_time;
+user_type;
+user_name;
+card_type;
+card_number;
+card_address;
+shop_number;
+buss_time;
+open_channel;
+development_ess;
+development_name;
+development_code;
+mini_bssid;
+psam_id;
+channel;    
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#订单日期#false#30#;
+1#订单状态#true#30#;
+2#省分#false#10#;
+3#地市#false#10#;
+4#商品类型#false#10#;
+5#套餐名称#false#30#;
+6#号码网别#false#5#;
+7#终端品牌#false#30#;
+8#活动类型#false#30#;
+9#商城实收#true#30#;
+10#应收#true#30#;
+11#支付状态#false#50#;
+12#支付方式#false#50#;
+13#支付时间#false#30#;
+14#用户类型#false#20#;
+15#客户姓名#false#1000#;
+16#证件类型#false#1000#;
+17#证件号码#false#1000#;
+18#证件地址#false#2000#;
+19#开户号码#false#1000#;
+20#订单生成时间#false#30#;
+21#开户渠道#false#50#;
+22#发展人(取自ESS)#false#20#;
+23#发展人名称#false#100#;
+24#发展人渠道编码#false#20#;
+25#迷你厅流水号（30位）#true#30#;
+26#终端号（PSAM卡号）#false#20#;
+27#渠道类型#true#7#;
+</value>
+</property>
+
+</configuration>
+

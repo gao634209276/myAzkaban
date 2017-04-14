@@ -1,0 +1,5 @@
+type=hive
+user.to.proxy=azkaban
+azk.hive.action=execute.query
+hive.script=import_day_detail.hql
+dependencies=etl_jfmsg_tg,etl_scmsg_tg,mysql_to_hive_dayago,load_develop

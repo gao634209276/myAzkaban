@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_push</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+push_biz_type;
+push_time;
+device_id;
+mobile;
+channel_no;
+prov_id;
+msg_type;
+msg;
+status;
+push_type;
+group_id;
+his_binding_mobile;
+his_prov;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#推送业务类型#true#2#;
+1#trans_time推送时间#true#17#;
+2#设备号#true#100#;
+3#用户号码#false#16#;
+4#渠道编码#true#11#;
+5#省份编码#false#3#;
+6#消息类型#false#2#;
+7#消息内容#false#200#;
+8#推送状态#false#2#;
+9#推送类型#false#4#;
+10#群组id#false#100#;
+11#his_binding_mobile#false#100#;
+12#his_prov#false#100#;
+</value>
+</property>
+
+</configuration>

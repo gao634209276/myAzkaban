@@ -1,0 +1,8 @@
+type=command
+command=echo 'hello azkaban'
+#依赖
+dependencies=echo_begin
+#可选配置：配置job失败重启次数（12次），及间隔时间（5分钟）
+retries=12
+#单位毫秒
+retry.backoff=300000

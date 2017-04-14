@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/export.sh t_codewapdetail ${oracle_url} ${oracle_username} ${oracle_password}
+dependencies=delete-t_codewapdetail_dayago

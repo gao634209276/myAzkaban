@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_shop_tuidan</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+bss_id;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#订单号#true#50#;
+</value>
+</property>
+
+</configuration>
+

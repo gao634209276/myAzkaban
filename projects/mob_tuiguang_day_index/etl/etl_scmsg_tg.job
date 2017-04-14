@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/etl.sh ${query_time} ${log_type_sc} ${rerun}
+dependencies=load_scmsg_tg

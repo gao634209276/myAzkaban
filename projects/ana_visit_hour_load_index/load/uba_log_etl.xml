@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+<name>hive.table.name</name>
+<value>t_uba_log</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+      id;
+      visit_date;
+      visit_url;
+      visit_domain;
+      visit_ip;
+      visit_chid;
+      visit_site;
+      session_id;
+      visit_id;
+      refer_url;
+      refer_chid;
+      refer_domain;
+      refer_site;
+      page_title;
+      visit_ua;
+      flash_version;
+      system_id;
+      src_color;
+      src_size;
+      scr_pixel;
+      cookies_value;
+      local_ip;
+      visit_pro;
+      appname;
+      browserlanguage;
+      cookieenabled;
+      cpuclass;
+      platform;
+      systemlanguage;
+      userlanguage;
+      channel;
+      search;
+      search_key;
+      browser;
+      os;
+      loninname;
+      logintime;
+      logouttime;
+      cookiepath;
+      dime_id;
+      newuser;
+  insert_time
+</value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#ID#false#5000#;
+1#访问时间#false#5000#;
+2#访问URL#false#5000#;
+3#访问域名#false#5000#;
+4#访问者IP#false#5000#;
+5#访问频道ID#false#5000#;
+6#访问站点ID#false#5000#;
+7#SESSION_ID#false#5000#;
+8#访问者ID(COOKIE中的VU_ID值)#false#5000#;
+9#来源URL#false#5000#;
+10#来源频道ID#false#5000#;
+11#来源域名#false#5000#;
+12#来源站点ID#false#5000#;
+13#页面标题#false#5000#;
+14#浏览器UA#false#5000#;
+15#FLASH版本#false#5000#;
+16#系统(visit页面提供)#false#5000#;
+17#屏幕颜色#false#5000#;
+18#屏幕大小#false#5000#;
+19#屏幕的分辨率#false#5000#;
+20#第三方COOKIE值(记录调用者的cookie) 需要调用者设置U_C_VS#false#5000#;
+21#服务器IP#false#5000#;
+22#省份#false#5000#;
+23#浏览器名称#false#5000#;
+24#浏览器语言#false#5000#;
+25#是否启用 cookie#false#5000#;
+26#浏览器系统 CPU 等级#false#5000#;
+27#操作系统平台#false#5000#;
+28#OS 默认语言#false#5000#;
+29#OS 自然语言设置#false#5000#;
+30#渠道来源类型（1：搜索引擎，2：直接访问，3：外部访问）#false#5000#;
+31#搜索引擎#false#5000#;
+32#搜索关键字#false#5000#;
+33#浏览器#false#5000#;
+34#操作系统#false#5000#;
+35#用户登录名称#false#5000#;
+36#系统登录时#false#5000#;
+37#系统退出时间#false#5000#;
+38#访问路径PATH#false#5000#;       
+39#维度ID#false#5000#;     
+40#新用户#false#5000#;
+</value>
+</property>
+</configuration>

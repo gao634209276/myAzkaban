@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_ad</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+channel_no;
+ad_name;
+ad_pos_name;
+client_ip;
+query_time;
+prov_id;
+city_id;
+channel_name;
+goto_url;
+user_agent;
+session_id;
+main_ad_no;
+templ_no;
+ad_idx;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#投放渠道编码#true#100#select CHANNEL_CODE,CHANNEL_CODE from T_EBD_CHANNEL;
+1#广告名称#true#100#;
+2#广告位名称#true#100#;
+3#访问IP#true#100#;
+4#trans_time时间#true#100#;
+5#投放地域省分#false#100#;
+6#投放地域地市#false#100#;
+7#投放渠道名称#false#100#;
+8#跳转url#true#3000#;
+9#用户UA信息#true#3000#;
+10#用户sessionId#true#100#;
+11#主广告位编码#false#50#;
+12#模板编号#false#50#;
+13#模板广告顺序#false#50#;
+</value>
+</property>
+</configuration>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>hive.table.name</name>
+  <value>t_ods_shortaddress</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+time_local;
+short_url;
+long_url;
+http_user_agent;
+hxff;
+insert_time
+  </value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#时间#true#100#;
+1#短地址#true#100#;
+2#长地址#false#500#;
+3#浏览器信息#false#500#;
+4#IP地址#false#100#;
+</value>
+</property>
+</configuration>
+              

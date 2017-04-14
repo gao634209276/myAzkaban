@@ -1,0 +1,5 @@
+type=hive
+user.to.proxy=azkaban
+azk.hive.action=execute.query
+hive.script=analyze_result_day.hql
+dependencies=analyze_mid_day

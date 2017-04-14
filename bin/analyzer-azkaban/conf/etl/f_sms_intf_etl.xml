@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+<name>hive.table.name</name>
+<value>t_ods_f_sms_intf</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+  bss_id;
+  user_mobile;
+  biz_time;
+  biz_id;
+  if_type;
+  interface_id;
+  version;
+  application_key; 
+  result_key;
+  interface_fail_id;
+  fail_reson;
+  ip;
+  province_id;
+  city_id;
+  biz_hostip;
+  biz_process;
+  dutation_time;
+  insert_time
+</value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#流水号#true#50#;
+1#用户号码#true#20#;
+2#业务办理时间#true#50#;
+3#业务编码#true#50#;
+4#接口类型#true#5#;
+5#接口编码#true#20#;
+6#版本#true#5#;
+7#渠道#true#100#;
+8#结果#true#100#;
+9#接口失败编码#true#100#;
+10#失败原因#true#200#;
+11#用户请求IP地址#false#100#;
+12#省编码#false#3#;
+13#地市编码#false#4#;
+14#承载主机IP地址#true#100#;
+15#承载节点名称#true#100#;
+16#接口调用时长#true#100#;
+</value>
+</property>
+</configuration>

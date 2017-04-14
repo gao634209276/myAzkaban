@@ -1,0 +1,3 @@
+type=command
+command= ${app_home}/next_province_ftp.sh ${query_time} ${local_directory} msg_tg
+dependencies=profile_next_province

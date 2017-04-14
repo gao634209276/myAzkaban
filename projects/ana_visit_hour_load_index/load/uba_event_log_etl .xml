@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+<name>hive.table.name</name>
+<value>t_uba_event_log</value>
+</property>
+<property>
+  <name>hive.table.columns</name>
+  <value>
+      id;
+      visit_date;
+      visit_url;
+      visit_domain;
+      visit_ip;
+      visit_chid;
+      visit_site;
+      local_ip;
+      session_id;
+      visit_id;
+      refer_url;
+      refer_domain;
+      refer_chid;
+      refer_site;
+      page_title;
+      visit_ua;
+      flash_version;
+      system_id;
+      src_color;
+      src_size;
+      system_id;
+      cookies_value;
+      scr_pixel;
+      event_id;
+      event_type;
+      to_url;
+  insert_time
+</value>
+</property>
+<property>
+  <name>etl.conf</name>
+  <value>
+0#ID#false#5000#;
+1#访问时间#false#5000#;
+2#访问URL#false#5000#;
+3#访问域名#false#5000#;
+4#访问者IP#false#5000#;
+5#访问频道ID#false#5000#;
+6#访问站点ID#false#5000#;
+7#服务器IP#false#5000#;
+8#SESSION_ID#false#5000#;
+9#访问者ID(COOKIE中的VU_ID值)#false#5000#;
+10#来源URL#false#5000#;
+11#来源域名#false#5000#;
+12#来源频道ID#false#5000#;
+13#来源站点ID#false#5000#;
+14#页面标题#false#5000#;
+15#浏览器UA#false#5000#;
+16#FLASH版本#false#5000#;
+17#屏幕颜色#false#5000#;
+18#屏幕大小#false#5000#;
+19#系统(visiturl页面提供)#false#5000#;
+20#第三方COOKIE值(记录调用者的cookie) 需要调用者设置U_C_VS#false#5000#;
+21#屏幕的分辨率#false#5000#;
+22#事件ID#false#5000#;
+23#事件类型，比如 click#false#5000#;
+24#要去往的URL#false#5000#;
+</value>
+</property>
+</configuration>

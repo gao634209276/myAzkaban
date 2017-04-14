@@ -1,0 +1,25 @@
+create table as
+insert overwrite table as select
+insert overwrite local directory select
+load data local inpath
+alter table change column
+alter table add columns
+buckets
+join/group by不能决定reduce数量，通过spark.sql.shuffle.partitions=200/executor core
+支持：
+insert overwrite table partition(..)
+alter table rename to
+alter table test set location/tblpropertoes(comment/external)
+alter table test set serdeproperties('field.delim'='\t');
+create table like
+truncate table
+drop table
+insert into table [partition] select ;
+hive中所有set参数，spark中所有set参数
+set spark.sql.thriftserver.scheduler.pool
+sparkSQL支持hive不支持的sql：
+
+union all(不去重）
+union(去重并集）
+intersect（交集）
+except（除去右表）
