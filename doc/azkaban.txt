@@ -1,0 +1,6 @@
+从源码看Azkaban作业流下发过程
+http://www.cnblogs.com/znicy/p/5742711.html
+
+azkaban集群多节点模式配置
+http://blog.csdn.net/jacklin929/article/details/53742638
+
