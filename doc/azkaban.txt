@@ -3,3 +3,7 @@ http://www.cnblogs.com/znicy/p/5742711.html
 
 azkaban集群多节点模式配置
 http://blog.csdn.net/jacklin929/article/details/53742638
+
+
+flume--Azkaban--sqoop
+http://blog.csdn.net/zlfing/article/details/77688504?locationNum=8&fps=1
